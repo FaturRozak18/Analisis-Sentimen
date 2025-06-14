@@ -172,7 +172,7 @@ def predict_sentiment(text, vectorizer, model, stemmer):
         
         # Map prediction to label
         label_map = {0: 'Negatif', 1: 'Netral', 2: 'Positif'}
-        sentiment_label = label_map.get(prediction, 'Netral')
+        sentiment_label = label_map.get(prediction, label_map)
         
         # Get confidence score
         confidence = max(probability) * 100
