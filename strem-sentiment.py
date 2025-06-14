@@ -180,7 +180,7 @@ def predict_sentiment(text, vectorizer, model, stemmer):
         return sentiment_label, confidence, probability
     except Exception as e:
         st.error(f"Error in prediction: {e}")
-        return "Netral", 0.0, [0.33, 0.34, 0.33]
+        return label_map, 0.0, [0.33, 0.34, 0.33]
 
 # Load data untuk analisis batch
 @st.cache_data
