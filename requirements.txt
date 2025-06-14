@@ -1,0 +1,8 @@
+streamlit>=1.28.0
+pandas>=1.5.3
+numpy>=1.26.0
+scikit-learn>=1.3.0
+nltk>=3.8.1
+Sastrawi>=1.0.1
+joblib>=1.3.2
+plotly>=5.15.0
