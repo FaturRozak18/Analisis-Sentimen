@@ -171,7 +171,7 @@ def predict_sentiment(text, vectorizer, model, stemmer):
         probability = model.predict_proba(text_vector)[0]
         
         # Map prediction to label
-        label_map = {0: 'Negatif', 1: 'Netral', 2: 'Positif'}
+        label_map = {-1: 'Negatif', 0: 'Netral', 1: 'Positif'}
         sentiment_label = label_map.get(prediction, 'Netral')
         
         # Get confidence score
