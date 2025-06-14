@@ -172,7 +172,7 @@ def predict_sentiment(text, vectorizer, model, stemmer):
         
         # Map prediction to label
         label_map = {0: 'Negatif', 1: 'Netral', 2: 'Positif'}
-        sentiment_label = label_map.get(prediction, label_map)
+        sentiment_label = label_map.get(prediction, 'Netral')
         
         # Get confidence score
         confidence = max(probability) * 100
@@ -180,7 +180,7 @@ def predict_sentiment(text, vectorizer, model, stemmer):
         return sentiment_label, confidence, probability
     except Exception as e:
         st.error(f"Error in prediction: {e}")
-        return label_map, 0.0, [0.33, 0.34, 0.33]
+        return "Netral", 0.0, [0.33, 0.34, 0.33]
 
 # Load data untuk analisis batch
 @st.cache_data
